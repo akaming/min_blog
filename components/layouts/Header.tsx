@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Link from "next/link";
 import { makeStyles } from "@material-ui/core/styles";
@@ -6,6 +6,9 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles(() => ({
   title: {
     fontSize: "3.4rem",
+    "@media screen and (max-width: 767px)": {
+      fontSize: "1.7rem",
+    },
   },
 }));
 
@@ -30,25 +33,34 @@ const NaviItem = styled.div`
   &::after {
     margin-right: 0;
   }
+  @media screen and (max-width: 767px) {
+    font-size: 1.2rem;
+  }
 `;
 
 const Logout = styled.button`
   border: none;
   background-color: transparent;
   font-size: 2.4rem;
+
+  @media screen and (max-width: 767px) {
+    font-size: 1.2rem;
+  }
 `;
 
 function Header() {
   const classes = useStyles();
+  // api 만들고 유저정보 가쟈와서 name 넣기
+  const [name, setName] = useState("명민");
 
   return (
     <Container>
       <Link href="/">
-        <a className={classes.title}>명민 블로그</a>
+        <a className={classes.title}>{name} 블로그</a>
       </Link>
       <Nav>
         <NaviItem>
-          <Link href="/">
+          <Link href="/views/list">
             <a>STUDY</a>
           </Link>
         </NaviItem>
