@@ -1,7 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-// import { Header } from "../../components/layouts";
-// import { Footer } from "../../components/layouts";
 
 const Banner = styled.div`
   height: 0;
@@ -72,9 +70,9 @@ const CardDay = styled.small`
 `;
 
 function HomeView() {
+  /* TODO:api 하면 map 으로 돌리기 */
   return (
     <>
-      {/* <Header /> */}
       <Banner />
       <Card>
         <CardItem>
@@ -104,7 +102,6 @@ function HomeView() {
           <CardDay>2021.07.08</CardDay>
         </CardItem>
       </Card>
-      {/* <Footer /> */}
     </>
   );
 }
