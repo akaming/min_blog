@@ -17,6 +17,9 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'S-CoreDream-3Light';
         font-size: 62.5%;
 
+        @media screen and (max-width: 767px) {
+          font-size: 1.2rem;
+        }
     };
     
     body > div {

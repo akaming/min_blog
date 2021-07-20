@@ -34,10 +34,6 @@ const CardItem = styled.div`
 const CardTitle = styled.h2`
   padding-bottom: 20px;
   font-size: 2.4rem;
-
-  @media screen and (max-width: 767px) {
-    font-size: 1.2rem;
-  }
 `;
 
 const CardText = styled.p`
@@ -55,7 +51,6 @@ const CardText = styled.p`
 
   @media screen and (max-width: 767px) {
     height: auto;
-    font-size: 0.8rem;
   }
 `;
 
@@ -63,10 +58,6 @@ const CardDay = styled.small`
   display: flex;
   justify-content: flex-end;
   font-size: 1.2rem;
-
-  @media screen and (max-width: 767px) {
-    font-size: 0.6rem;
-  }
 `;
 
 function HomeView() {
