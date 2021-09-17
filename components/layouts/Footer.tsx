@@ -2,17 +2,20 @@ import React from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  padding: 0 6.25%;
-  height: 100px;
   background-color: #fff;
   border-top: 1px solid #eee;
-  align-items: center;
 `;
 
 const Text = styled.p`
-  font-size: 1.2rem;
+  display: flex;
+  justify-content: flex-start;
+  max-width: 100%;
+  width: 1170px;
+  height: 100px;
+  margin: 0 auto;
+  padding: 0 15px;
+  align-items: center;
+  font-size: 12px;
 `;
 
 function Footer() {

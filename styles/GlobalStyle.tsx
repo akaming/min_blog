@@ -10,17 +10,21 @@ const GlobalStyle = createGlobalStyle`
       font-style: normal;
     };
 
-    html,body,button{
+    html,body{
         height: 100%;
         padding: 0;
         margin: 0;
         font-family: 'S-CoreDream-3Light';
         font-size: 62.5%;
 
-        @media screen and (max-width: 767px) {
-          font-size: 1.2rem;
-        }
+        // @media screen and (max-width: 767px) {
+        //   font-size: 1.2rem;
+        // }
     };
+
+    button {
+      font-family: 'S-CoreDream-3Light';
+    }
     
     body > div {
         height: 100%;
