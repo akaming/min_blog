@@ -1,5 +1,4 @@
-import React from "react";
-import styled from 'styled-components';
+import React, { useEffect, useState } from "react";
 import Gallery from "../../../components/Gallery";
 import Button from "../../../components/layouts/Button";
 import SubHeader from "../../../components/layouts/SubHeader";
@@ -11,26 +10,7 @@ function List() {
       <SubHeader title="PROJECTS"/>
       <Container>
       <Button text="글쓰기" link="projects"/>
-        <Gallery elements={[
-          {
-            src: "https://picsum.photos/500",
-            link: "https://www.naver.com/",
-            title: "제목"
-          },
-          {
-            src: "https://picsum.photos/500"
-          },
-          {
-            src: "https://picsum.photos/500"
-          },
-          {
-            src: "https://picsum.photos/500"
-          },
-          {
-            src: "https://picsum.photos/500"
-          }
-        ]}
-        />
+        <Gallery/>
         {/* <button onClick={() => Router.push('/')}>홈</button> */}
     </Container>
     </>
