@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Masonry from 'react-masonry-component';
 import styles from '../styles/Gallery.module.scss';
+import Link from 'next/link';
 
 const masonryOptions = {
     transitionDuration: 1000
@@ -26,11 +27,14 @@ function Gallery() {
                 for (let i = 0; i < res.data.length; i++) {
                     temp.push({
                         src: res.data[i].image_src,
-                        link: res.data[i].link,
+                        id: res.data[i].id,
                         title: res.data[i].title 
                     });
                 }
                 setLists(temp);
+            })
+            .catch((error) => {
+                alert(`알 수 없는 에러가 발생함: ${error}`);
             })
     }, []);
     if ( !lists) {
@@ -40,26 +44,28 @@ function Gallery() {
     const childElements = lists.map(function(element, index){
        return (
             <li className={styles.gallery_item} key={index}>
-                <a href={element.link} target="_blank">
-                    <figure className={styles.gallery_image}>
-                        <img src={element.src} style={{width:'100%'}}/>
-                        <figcaption className={styles.gallery_title}>
-                            <h4 className={styles.gallery_text}>{element.title}</h4>
-                        </figcaption>
-                    </figure>
-                </a>
+                <Link href={`/projects/view?id=${element.id}`}>
+                    <a>
+                        <figure className={styles.gallery_image}>
+                            <img src={element.src} style={{width:'100%'}}/>
+                            <figcaption className={styles.gallery_title}>
+                                <h4 className={styles.gallery_text}>{element.title}</h4>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </Link>
             </li>
         );
     });
 
     return (
         <Masonry
-            className={styles.portfolio_items} // default ''
-            elementType={'ul'} // default 'div'
-            options={masonryOptions} // default {}
-            disableImagesLoaded={false} // default false
-            updateOnEachImageLoad={false} // default false and works only if disableImagesLoaded is false
-            imagesLoadedOptions={imagesLoadedOptions} // default {}
+            className={styles.portfolio_items} 
+            elementType={'ul'} 
+            options={masonryOptions} 
+            disableImagesLoaded={false}
+            updateOnEachImageLoad={false} 
+            imagesLoadedOptions={imagesLoadedOptions} 
         >
             {childElements}
         </Masonry>

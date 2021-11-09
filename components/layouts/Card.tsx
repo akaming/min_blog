@@ -26,7 +26,8 @@ const CardItem = styled.div`
 
 const CardTitle = styled.h2`
   padding-bottom: 20px;
-  font-size: 24px;
+  font-size: 20px;
+  font-weight: bold;
 `;
 
 const CardText = styled.p`
