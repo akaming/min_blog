@@ -19,7 +19,7 @@ const useStyles = makeStyles(() => ({
 function Button(props){
     const classes = useStyles();
     return(
-        <Link href={`/views/${props.link}/write`} >
+        <Link href={`/${props.link}/write`} >
             <a className={classes.button}>{props.text}</a>
         </Link>
     )

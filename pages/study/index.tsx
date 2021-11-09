@@ -1,7 +1,7 @@
 import React from "react";
-import Card from "../../../components/layouts/Card";
-import SubHeader from "../../../components/layouts/SubHeader"
-import Container from "../../../styles/Container";
+import Card from "../../components/layouts/Card";
+import SubHeader from "../../components/layouts/SubHeader"
+import Container from "../../styles/Container";
 
 function List() {
 

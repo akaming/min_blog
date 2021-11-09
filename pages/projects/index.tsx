@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import Gallery from "../../../components/Gallery";
-import Button from "../../../components/layouts/Button";
-import SubHeader from "../../../components/layouts/SubHeader";
-import Container from "../../../styles/Container";
+import Gallery from "../../components/Gallery";
+import Button from "../../components/layouts/Button";
+import SubHeader from "../../components/layouts/SubHeader";
+import Container from "../../styles/Container";
 
 function List() {
   return (

@@ -32,7 +32,7 @@ const Nav = styled.div`
 `;
 
 const NaviItem = styled.div`
-  font-size: 20px;
+  font-size: 18px;
   margin: 0 20px;
 
   &::after {
@@ -44,7 +44,7 @@ const NaviItem = styled.div`
   }
 
   @media screen and (max-width: 767px) {
-    font-size: 18px;
+    font-size: 14px;
     margin: 0 10px;
   }
 `;
@@ -53,10 +53,10 @@ const Logout = styled.button`
   padding: 0;
   border: none;
   background-color: transparent;
-  font-size: 20px;
+  font-size: 18px;
 
   @media screen and (max-width: 767px) {
-    font-size: 18px;
+    font-size: 14px;
   }
 `;
 
@@ -72,12 +72,12 @@ function Header() {
       </Link>
       <Nav>
         <NaviItem>
-          <Link href="/views/projects">
+          <Link href="/projects">
               <a>PROJECTS</a>
             </Link>
         </NaviItem>
         <NaviItem>
-          <Link href="/views/study">
+          <Link href="/study">
             <a>STUDY</a>
           </Link>
         </NaviItem>

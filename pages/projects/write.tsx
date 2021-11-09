@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Button, FormGroup, TextField } from "@material-ui/core";
-import SubHeader from "../../../components/layouts/SubHeader";
-import Container from "../../../styles/Container";
+import SubHeader from "../../components/layouts/SubHeader";
+import Container from "../../styles/Container";
 import {makeStyles} from "@material-ui/core/styles";
 import { useState } from "react";
 
@@ -81,12 +81,13 @@ function List() {
                         <TextField InputProps={{classes: {root: classes.input}}} InputLabelProps={{classes: {root: classes.label}}} className={classes.inputBox}/>
                     </LineBox>
                     <LineBox>
-                        <Title>썸네일</Title>
-                        <Button variant="contained" component="label" className={classes.fileUpload} color="secondary">
+                        <Title>썸네일 주소</Title>
+                        {/* <Button variant="contained" component="label" className={classes.fileUpload} color="secondary">
                             Upload File
                             <input type="file" accept="image/png, image/jpeg" onChange={changeFile} hidden />
                         </Button>
-                        <ImgPreview src={imgSrc} />
+                        <ImgPreview src={imgSrc} /> */}
+                        <TextField InputProps={{classes: {root: classes.input}}} InputLabelProps={{classes: {root: classes.label}}} className={classes.inputBox}/>
                     </LineBox>
                     <LineBox>
                         <Title>내용</Title>
