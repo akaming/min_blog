@@ -5,6 +5,7 @@ import Container from "../../styles/Container";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import {makeStyles} from "@material-ui/core/styles";
+import { useRouter } from 'next/router'
 
 const Content = styled.p`
     padding-top: 70px;
@@ -36,17 +37,26 @@ const useStyles = makeStyles(() => ({
 
 function Article() {
     const classes = useStyles();
-
-    const num = 1;
     const [project, setProject] = useState({
         title: "",
         src: "",
         content: ""
     });
+    const router = useRouter();
+    const [param, setParam]=useState();
+
+    useEffect(() => {        
+        if (router && router.query) {
+            setParam(router.query.id);
+        }
+    },[router]);
 
     useEffect(() => {
+        if ( !param ) {
+            return
+        }
         axios
-            .get("https://mm-blog-api.herokuapp.com/projects/" + num  , {
+            .get("https://mm-blog-api.herokuapp.com/projects/" + param  , {
                 
             })
             .then((res)=> {
@@ -59,7 +69,7 @@ function Article() {
                 
             })
             .catch()
-    }, []);
+    }, [param]);
 
     return (
         <>
