@@ -14,12 +14,12 @@ const useStyles = makeStyles((theme) => ({
     },
     input: {
             fontSize: "20px",
-            [theme.breakpoints.up('sm')]: {
-                color: "blue"
-            },
-            [theme.breakpoints.up('md')]: {
-                color: "red"
-            }
+            // [theme.breakpoints.up('sm')]: {
+            //     color: "blue"
+            // },
+            // [theme.breakpoints.up('md')]: {
+            //     color: "red"
+            // }
         },
     label: {
         fontSize: "20px"
@@ -94,6 +94,7 @@ function List() {
                         <textarea className={classes.textBox}/>
                     </LineBox>
                 </FormGroup>
+                <Button>저장</Button>
             </Container>
         </>
     );
